@@ -40,7 +40,8 @@
         },
 
         "Fixed Nodes": {
-            "both_time_control" : "N=25000"
+            "both_time_control" : "N=25000",
+            "workload_size"     : 32
         }
     },
 
