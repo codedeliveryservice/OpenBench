@@ -455,8 +455,7 @@ class Cutechess:
 
         # Human-readable name, and scale the time control
         name    = command.replace('.exe', '')
-        control = scale_time_control(config.workload, 1.0, branch)
-        print("Using a fixed factor of 1.0 instead of %.4f for %s" % (scale_factor, name))
+        control = scale_time_control(config.workload, scale_factor, branch)
 
         # Private engines, when using Networks, must set them via UCI
         if private and network and network != 'None':
