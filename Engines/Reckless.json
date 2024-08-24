@@ -1,6 +1,6 @@
 {
     "private" : false,
-    "nps"     : 1950000,
+    "nps"     : 2000000,
     "source"  : "https://github.com/codedeliveryservice/Reckless",
 
     "build" : {
