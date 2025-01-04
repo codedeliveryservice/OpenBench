@@ -1,7 +1,7 @@
 {
     "client_version"  : 36,
-    "client_repo_url" : "https://github.com/AndyGrant/OpenBench",
-    "client_repo_ref" : "master",
+    "client_repo_url" : "https://github.com/codedeliveryservice/OpenBench",
+    "client_repo_ref" : "reckless",
 
     "use_cross_approval"          : false,
     "require_login_to_view"       : false,
@@ -20,29 +20,12 @@
         "UHO_4060_v2.epd",
         "UHO_4060_vB.epd",
         "UHO_4060_vT.epd",
-        "UHO_Lichess_4852_v1.epd"
+        "UHO_Lichess_4852_v1.epd",
+        "Kaggle.epd"
     ],
 
     "engines" : [
-        "4ku",
-        "Berserk",
-        "Bit-Genie",
-        "BlackMarlin",
-        "Demolito",
-        "Drofa",
-        "Equisetum",
-        "Ethereal",
-        "FabChess",
-        "Halogen",
-        "Igel",
-        "Koivisto",
-        "Laser",
-        "RubiChess",
-        "Seer",
-        "Stash",
-        "Stockfish",
-        "Weiss",
-        "Winter",
-        "Zahak"
+        "Approvers",
+        "Reckless"
     ]
 }
