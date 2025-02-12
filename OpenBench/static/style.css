@@ -69,8 +69,14 @@ body, html, main{
 
 #sidebar li a {
     color: var(--color-font2);
-    display: block;
     width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#sidebar li a i {
+    height: 18px;    
+    margin-right: 10px;
 }
 
 #sidebar li:hover {
