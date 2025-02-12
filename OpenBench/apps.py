@@ -89,8 +89,8 @@ class OpenBenchConfig(django.apps.AppConfig):
             self.pgn_watcher      = PGNWatcher(self.stop_pgn_watcher, daemon=True)
 
             # Start everything
-            self.artifact_watcher.start()
-            self.pgn_watcher.start()
+            # self.artifact_watcher.start()
+            # self.pgn_watcher.start()
 
             # Ensure we cleanup upon exit
             atexit.register(self.shutdown)
