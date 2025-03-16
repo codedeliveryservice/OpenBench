@@ -270,9 +270,15 @@ def index(request, page=1):
 
     start, end, paging = OpenBench.utils.getPaging(completed, int(page), 'index')
 
+    active_grouped = []
+    for t in active:
+        if len(active_grouped) == 0 or active_grouped[-1]["priority"] != t.priority:
+            active_grouped.append({"priority": t.priority, "tests": []})
+        active_grouped[-1]["tests"].append(t)
+
     data = {
         'pending'   : pending,
-        'active'    : active,
+        'active'    : active_grouped,
         'completed' : completed[start:end],
         'awaiting'  : awaiting,
         'paging'    : paging,
