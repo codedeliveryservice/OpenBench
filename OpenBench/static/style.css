@@ -318,6 +318,14 @@ body, html, main{
 
 /* Test Views */
 
+#content .test-list tr td:nth-of-type(7):empty {
+    padding: 0;
+}
+
+#content .test-list tr td:nth-of-type(7) {
+    white-space: pre-wrap;
+}
+
 #content #config {
     float: left;
 }
@@ -490,5 +498,9 @@ td pre {
 
     #content .long-statblock {
         overflow-x: auto;
+    }
+
+    #content .test-list tr td:nth-of-type(7) {
+        display: none;
     }
 }

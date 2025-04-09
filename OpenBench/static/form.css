@@ -65,6 +65,7 @@
     background-color: var(--color2);
     color: var(--color-font2);
     font-family: "Courier Prime", serif;
+    resize: vertical;
 }
 
 #content .row input[type="file"]{
