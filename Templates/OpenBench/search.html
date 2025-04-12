@@ -2,6 +2,20 @@
 
 {% block scripts %}
 
+    <style>
+        #content {
+            max-width: 100%;
+        }
+        
+        #content .test-list tr td:nth-of-type(8):empty {
+            padding: 0;
+        }
+
+        #content .test-list tr td:nth-of-type(8) {
+            white-space: pre-wrap;
+        }
+    </style>
+
     <script>
 
         function changed_timecontrol() {
