@@ -26,6 +26,9 @@
 
     "engines" : [
         "Approvers",
-        "Reckless"
+        "Reckless",
+        "Stormphrax",
+        "Viridithas",
+        "Alexandria"
     ]
 }
