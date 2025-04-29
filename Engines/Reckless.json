@@ -1,6 +1,6 @@
 {
     "private" : false,
-    "nps"     : 1450000,
+    "nps"     : 1400000,
     "source"  : "https://github.com/codedeliveryservice/Reckless",
 
     "build" : {
@@ -15,11 +15,11 @@
         "default" : {
             "base_branch"     : "main",
             "book_name"       : "UHO_Lichess_4852_v1.epd",
-            "test_bounds"     : "[0.00, 5.00]",
+            "test_bounds"     : "[0.00, 4.00]",
             "test_confidence" : "[0.10, 0.05]",
             "win_adj"         : "movecount=3 score=550",
             "draw_adj"        : "movenumber=30 movecount=6 score=15",
-            "both_options"    : "Threads=1 Hash=16",
+            "both_options"    : "Threads=1 Hash=16 Minimal=true",
             "workload_size"   : 16
         },
 
@@ -29,17 +29,17 @@
 
         "STC Simplification" : {
             "both_time_control" : "8.0+0.08",
-            "test_bounds"       : "[-5.00, 0.00]"
+            "test_bounds"       : "[-4.00, 0.00]"
         },
 
         "LTC" : {
-            "both_options"      : "Threads=1 Hash=64",
+            "both_options"      : "Threads=1 Hash=64 Minimal=true",
             "both_time_control" : "40.0+0.4",
             "workload_size"     : 8
         },
 
         "Fixed Nodes": {
-            "both_options"      : "Threads=1 Hash=8",
+            "both_options"      : "Threads=1 Hash=8 Minimal=true",
             "both_time_control" : "N=25000",
             "workload_size"     : 64
         }
@@ -54,7 +54,7 @@
         },
 
         "STC" : {
-            "dev_options"      : "Threads=1 Hash=16",
+            "dev_options"      : "Threads=1 Hash=16 Minimal=true",
             "dev_time_control" : "8.0+0.08"
         }
     },
@@ -68,7 +68,7 @@
         },
 
         "20k Nodes" : {
-            "both_options"      : "Threads=1 Hash=16",
+            "both_options"      : "Threads=1 Hash=16 Minimal=true",
             "both_time_control" : "N=20000"
         }
     }
