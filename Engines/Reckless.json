@@ -17,8 +17,8 @@
             "book_name"       : "UHO_Lichess_4852_v1.epd",
             "test_bounds"     : "[0.00, 4.00]",
             "test_confidence" : "[0.10, 0.05]",
-            "win_adj"         : "movecount=3 score=550",
-            "draw_adj"        : "movenumber=30 movecount=6 score=15",
+            "win_adj"         : "movecount=3 score=400",
+            "draw_adj"        : "movenumber=30 movecount=6 score=10",
             "both_options"    : "Threads=1 Hash=16 Minimal=true",
             "workload_size"   : 16
         },
@@ -41,7 +41,7 @@
         "Fixed Nodes": {
             "both_options"      : "Threads=1 Hash=8 Minimal=true",
             "both_time_control" : "N=25000",
-            "workload_size"     : 64
+            "workload_size"     : 128
         }
     },
 
@@ -49,13 +49,18 @@
 
         "default" : {
             "book_name" : "UHO_Lichess_4852_v1.epd",
-            "win_adj"   : "movecount=3 score=550",
-            "draw_adj"  : "movenumber=30 movecount=6 score=15"
+            "win_adj"   : "movecount=3 score=400",
+            "draw_adj"  : "movenumber=30 movecount=6 score=10"
         },
 
         "STC" : {
             "dev_options"      : "Threads=1 Hash=16 Minimal=true",
             "dev_time_control" : "8.0+0.08"
+        },
+
+        "LTC" : {
+            "dev_options"      : "Threads=1 Hash=64 Minimal=true",
+            "dev_time_control" : "40.0+0.4"
         }
     },
 
