@@ -20,6 +20,7 @@
             "win_adj"         : "movecount=3 score=400",
             "draw_adj"        : "movenumber=30 movecount=6 score=10",
             "both_options"    : "Threads=1 Hash=16 Minimal=true",
+            "upload_pgns"     : "COMPACT",
             "workload_size"   : 16
         },
 
