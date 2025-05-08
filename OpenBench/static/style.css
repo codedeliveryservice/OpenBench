@@ -5,7 +5,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 body {
-    --color1: #222222;
+    --color1: #1F1F1F;
     --color2: #2D2D2D;
     --color3: #3B3B3B;
 
@@ -57,6 +57,7 @@ body, html, main{
 #sidebar ul {
     list-style-type: none;
     padding: 0px 16px 0px 8px;
+    margin: 12px 0;
     line-height: 1.75;
 }
 
@@ -138,23 +139,23 @@ body, html, main{
 /* Table Headers in General */
 
 #content .table-header th:first-child {
-    border-top-left-radius: 12px;
+    border-top-left-radius: 8px;
 }
 
 #content .table-header th:last-child {
-    border-top-right-radius: 12px;
+    border-top-right-radius: 8px;
 }
 
 #content .table-header th {
     color: var(--color-font3);
     font-weight: 400;
-    background-color: #171717;
+    background-color: #181818;
 }
 
 #content .table-small-header th {
     color: var(--color-font3);
     font-size: small;
-    background-color: #171717;
+    background-color: #181818;
 }
 
 /* Table Spacer for chaining Tables as a hack */
@@ -165,7 +166,7 @@ body, html, main{
 }
 
 #content .table-spacer-small th, #content .table-spacer-small tr {
-    background-color: #171717;
+    background-color: #181818;
     height: 0.4rem;
     padding: 0px;
 }
@@ -207,7 +208,7 @@ body, html, main{
     color: var(--color-font1);
     display: inline-block;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
     font-family: "Courier Prime", serif;
     font-size: 13px;
     cursor: pointer;
