@@ -91,7 +91,7 @@
     padding: 6px 6px 3px;
     color: var(--color-font2);
     cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
+    transition: background-color 0.2s, border-color 0.3s;
     font-family: "Courier Prime", serif;
 }
 
