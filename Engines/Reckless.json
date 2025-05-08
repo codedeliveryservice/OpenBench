@@ -43,6 +43,21 @@
             "both_options"      : "Threads=1 Hash=8 Minimal=true",
             "both_time_control" : "N=25000",
             "workload_size"     : 128
+        },
+
+        "STC PT": {
+            "both_time_control" : "8.0+0.08",
+            "base_branch"       : "268e9385de8f3ca5f1834a2e44878493497ede82",
+            "base_network"      : "4DD4D325",
+            "test_max_games"    : 20000
+        },
+
+        "LTC PT": {
+            "both_time_control" : "40.0+0.4",
+            "base_branch"       : "268e9385de8f3ca5f1834a2e44878493497ede82",
+            "base_network"      : "4DD4D325",
+            "test_max_games"    : 10000,
+            "workload_size"     : 8
         }
     },
 
