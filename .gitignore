@@ -22,3 +22,5 @@ Media/Events/*
 *.lock
 *.epd
 *.env
+
+Storage
