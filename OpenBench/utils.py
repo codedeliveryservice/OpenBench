@@ -418,14 +418,8 @@ def notify_webhook(request, test_id):
     error = max(upper - elo, elo - lower)
     elo   = OpenBench.templatetags.mytags.twoDigitPrecision(elo)
     error = OpenBench.templatetags.mytags.twoDigitPrecision(error)
-    outcome = 'passed' if test.passed else 'failed'
-
-    # Green if passing, red if failing.
-    color = 0xFEFF58
-    if test.passed:
-        color = 0x37F769
-    elif test.wins < test.losses:
-        color = 0xFA4E4E
+    outcome = 'passed'
+    color = 0x37F769
 
     return requests.post(webhook, json={
         'username': test.dev_engine,
@@ -545,7 +539,7 @@ def update_test(request, machine):
     )
 
     try:
-        if test.finished and test.test_mode not in ['SPSA', 'DATAGEN']:
+        if test.finished and test.passed and test.test_mode not in ['SPSA', 'DATAGEN']:
             notify_webhook(request, test_id)
     except:
         traceback.print_exc()
