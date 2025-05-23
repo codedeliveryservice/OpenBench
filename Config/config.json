@@ -26,11 +26,14 @@
     ],
 
     "engines" : [
-        "Approvers",
         "Reckless",
-        "Stormphrax",
-        "Viridithas",
         "Alexandria",
-        "Integral"
+        "Berserk",
+        "Caissa",
+        "Integral",
+        "Viridithas",
+        "Stormphrax",
+        "Stockfish",
+        "Approvers"
     ]
 }
