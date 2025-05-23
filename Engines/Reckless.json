@@ -30,7 +30,7 @@
 
         "STC Simplification" : {
             "both_time_control" : "8.0+0.08",
-            "test_bounds"       : "[-4.00, 0.00]"
+            "test_bounds"       : "[-3.00, 0.00]"
         },
 
         "LTC" : {
@@ -83,14 +83,13 @@
     "datagen_presets" : {
 
         "default" : {
-            "win_adj"       : "None",
-            "draw_adj"      : "None",
-            "workload_size" : 128
-        },
-
-        "20k Nodes" : {
+            "win_adj"           : "None",
+            "draw_adj"          : "None",
+            "workload_size"     : 128,
+            "book_name"         : "UHO_Lichess_4852_v1.epd",
             "both_options"      : "Threads=1 Hash=16 Minimal=true",
-            "both_time_control" : "N=20000"
+            "both_time_control" : "N=5000",
+            "datagen_max_games" : "10000000"
         }
     }
 }
