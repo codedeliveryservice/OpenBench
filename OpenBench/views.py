@@ -893,6 +893,8 @@ def api_build_info(request):
 @csrf_exempt
 def api_pgns(request, pgn_id):
 
+    return api_response({ 'error' : 'This API endpoint is no longer available' })
+
     # 0. Make sure the request has the correct permissions
     if not api_authenticate(request):
         return api_response({ 'error' : 'API requires authentication for this server' })
