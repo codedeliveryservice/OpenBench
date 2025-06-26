@@ -15,7 +15,7 @@
         "default" : {
             "base_branch"     : "main",
             "book_name"       : "UHO_Lichess_4852_v1.epd",
-            "test_bounds"     : "[0.00, 4.00]",
+            "test_bounds"     : "[0.00, 3.00]",
             "test_confidence" : "[0.10, 0.05]",
             "win_adj"         : "movecount=3 score=400",
             "draw_adj"        : "movenumber=30 movecount=6 score=10",
@@ -42,6 +42,7 @@
         "Fixed Nodes": {
             "both_options"      : "Threads=1 Hash=8 Minimal=true",
             "both_time_control" : "N=25000",
+            "test_confidence"   : "[0.05, 0.05]",
             "workload_size"     : 128
         },
 
