@@ -22,7 +22,8 @@
         "UHO_4060_vT.epd",
         "UHO_Lichess_4852_v1.epd",
         "Kaggle.epd",
-        "Fortress.epd"
+        "Fortress.epd",
+        "Chess324.epd"
     ],
 
     "engines" : [
