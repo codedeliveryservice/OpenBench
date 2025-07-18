@@ -23,7 +23,8 @@
         "UHO_Lichess_4852_v1.epd",
         "Kaggle.epd",
         "Fortress.epd",
-        "Chess324.epd"
+        "Chess324.epd",
+        "DFRC_4852_v1.epd"
     ],
 
     "engines" : [
