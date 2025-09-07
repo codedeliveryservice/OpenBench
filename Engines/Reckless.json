@@ -19,7 +19,7 @@
             "test_confidence" : "[0.10, 0.05]",
             "win_adj"         : "movecount=3 score=400",
             "draw_adj"        : "movenumber=30 movecount=6 score=10",
-            "both_options"    : "Threads=1 Hash=16 Minimal=true",
+            "both_options"    : "Threads=1 Hash=16 Minimal=true MoveOverhead=0",
             "upload_pgns"     : "COMPACT",
             "workload_size"   : 16
         },
@@ -34,7 +34,7 @@
         },
 
         "LTC" : {
-            "both_options"      : "Threads=1 Hash=64 Minimal=true",
+            "both_options"      : "Threads=1 Hash=64 Minimal=true MoveOverhead=0",
             "both_time_control" : "40.0+0.4",
             "workload_size"     : 8
         },
@@ -42,8 +42,8 @@
         "Fixed Nodes": {
             "both_options"      : "Threads=1 Hash=8 Minimal=true",
             "both_time_control" : "N=25000",
-            "test_confidence"   : "[0.05, 0.05]",
-            "workload_size"     : 128
+            "workload_size"     : 128,
+            "test_max_games"    : 40000
         },
 
         "STC PT": {
@@ -71,12 +71,12 @@
         },
 
         "STC" : {
-            "dev_options"      : "Threads=1 Hash=16 Minimal=true",
+            "dev_options"      : "Threads=1 Hash=16 Minimal=true MoveOverhead=0",
             "dev_time_control" : "8.0+0.08"
         },
 
         "LTC" : {
-            "dev_options"      : "Threads=1 Hash=64 Minimal=true",
+            "dev_options"      : "Threads=1 Hash=64 Minimal=true MoveOverhead=0",
             "dev_time_control" : "40.0+0.4"
         }
     },
