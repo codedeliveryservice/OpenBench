@@ -46,6 +46,17 @@
             "test_max_games"    : 40000
         },
 
+        "STC SMP" : {
+            "both_options"      : "Threads=4 Hash=256 Minimal=true MoveOverhead=0",
+            "both_time_control" : "8.0+0.08"
+        },
+
+        "LTC SMP" : {
+            "both_options"      : "Threads=8 Hash=512 Minimal=true MoveOverhead=0",
+            "both_time_control" : "40.0+0.4",
+            "workload_size"     : 8
+        },
+
         "STC PT": {
             "both_time_control" : "8.0+0.08",
             "base_branch"       : "268e9385de8f3ca5f1834a2e44878493497ede82",
