@@ -320,7 +320,7 @@ def search(request):
     if request.method == 'GET':
         return render(request, 'search.html', {})
 
-    tests = Test.objects.all()
+    tests = Test.objects.all().order_by('-id')
 
     # Optional Selection box filters
 
@@ -415,7 +415,7 @@ def search(request):
         filtered.append(test)
 
     error = 'No matching tests found' if not len(filtered) else None
-    return render(request, 'search.html', { 'tests' : reversed(filtered) }, error=error)
+    return render(request, 'search.html', { 'tests' : filtered }, error=error)
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #                           GENERAL DATA TABLE VIEWS                          #
