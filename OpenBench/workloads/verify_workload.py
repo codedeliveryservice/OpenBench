@@ -385,7 +385,7 @@ def strip_message(m):
 def collect_github_info(errors, request, field):
 
     # Get branch name / commit sha / tag, and the API path for it
-    branch = request.POST['{0}_branch'.format(field)]
+    branch = request.POST['{0}_branch'.format(field)].strip()
     bysha  = bool(re.search('^[0-9a-fA-F]{40}$', branch))
 
     # All API requests will share this common path. Some engines are private.
