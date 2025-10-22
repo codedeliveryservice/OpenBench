@@ -1,5 +1,5 @@
 {
-    "client_version"  : 41,
+    "client_version"  : 42,
     "client_repo_url" : "https://github.com/codedeliveryservice/OpenBench",
     "client_repo_ref" : "cloud",
 
@@ -39,6 +39,7 @@
         "Viridithas",
         "Stormphrax",
         "Stockfish",
-        "Approvers"
+        "Approvers",
+        "Quanticade"
     ]
 }
