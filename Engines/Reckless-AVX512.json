@@ -30,7 +30,7 @@
 
         "STC Simplification" : {
             "both_time_control" : "8.0+0.08",
-            "test_bounds"       : "[-3.00, 0.00]"
+            "test_bounds"       : "[-2.75, 0.25]"
         },
 
         "LTC" : {
