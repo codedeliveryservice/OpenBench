@@ -77,7 +77,7 @@
         },
 
         "VSTC": {
-            "both_options"      : "Threads=1 Hash=16 Minimal=true",
+            "both_options"      : "Threads=1 Hash=16 Minimal=true MoveOverhead=0",
             "both_time_control" : "4.0+0.04",
             "test_bounds"       : "[0.00, 3.00]"
         },
