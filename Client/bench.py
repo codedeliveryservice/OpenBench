@@ -105,7 +105,7 @@ def multi_core_bench(binary, network, private, threads):
 
     except queue.Empty: # Force kill the engine, thus causing the processes to finish
         utils.kill_process_by_name(binary)
-        raise utils.OpenBenchBadBenchException('[%s] Bench Exceeded Max Duration' % (binary))
+        raise Exception('[%s] Bench Exceeded Max Duration' % (binary))
 
     finally: # Join everything to avoid zombie processes
         for process in processes:
