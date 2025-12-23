@@ -140,7 +140,7 @@ def credentialed_request(server, username, password, endpoint):
     target  = url_join(server, *endpoint.split('/'))
     payload = { 'username' : username, 'password' : password }
 
-    return requests.post(data=payload, url=target)
+    return requests.post(data=payload, url=target, timeout=(10, 120), stream=True)
 
 def read_git_credentials(engine):
     fname = 'credentials.%s' % (engine.replace(' ', '').lower())
