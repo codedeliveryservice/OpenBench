@@ -1375,6 +1375,7 @@ def run_openbench_worker(client_args):
 
     args   = parse_arguments(client_args) # Merge client.py and worker.py args
     config = Configuration(args)          # Holds System info, args, and Workload info
+
     try_forever(server_configure_fastchess, [config], fastchess_error)
     try_forever(server_configure_worker, [config], setup_error)
 
@@ -1417,6 +1418,8 @@ def run_openbench_worker(client_args):
             traceback.print_exc()
             time.sleep(TIMEOUT_ERROR)
             config = Configuration(args)
+
+            try_forever(server_configure_fastchess, [config], fastchess_error)
             try_forever(server_configure_worker, [config], setup_error)
 
         except Exception:
