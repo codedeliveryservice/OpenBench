@@ -124,6 +124,13 @@
             </div>
         {% endif %}
 
+        <!-- PGN Download Button -->
+        {% if workload.upload_pgns != "FALSE" %}
+            <div class="anchor-container">
+                <a class="mt-1 anchorbutton btn-blue" href="/api/pgns/{{workload.id}}/">Download PGN Archive</a>
+            </div>
+        {% endif %}
+
         <!-- Copies Raw SPSA Input from a hidden element -->
         {% if type == "TUNE" %}
             <div class="anchor-container">
