@@ -42,7 +42,7 @@
         "LTC Simplification" : {
             "both_options"      : "Threads=1 Hash=64 Minimal=true MoveOverhead=0",
             "both_time_control" : "40.0+0.4",
-            "test_bounds"       : "[-3.00, 0.00]",
+            "test_bounds"       : "[-2.75, 0.25]",
             "workload_size"     : 8
         },
 
