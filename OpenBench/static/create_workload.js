@@ -13,10 +13,11 @@ function create_network_options(field_id, engine) {
         network_options.remove(0);
 
     // Add each Network that matches the given engine
-    for (const network of networks) {
+    const engine_networks = networks
+        .filter(network => network.engine === engine)
+        .sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base', numeric: true }));
 
-        if (network.engine !== engine)
-            continue;
+    for (const network of engine_networks) {
 
         var opt      = document.createElement('option');
         opt.text     = network.name;
