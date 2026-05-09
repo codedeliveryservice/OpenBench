@@ -8,6 +8,8 @@ ENV/
 env.bak/
 venv.bak/
 
+staticfiles/
+
 *.pyc
 Client/*
 OpenBench/migrations/*
