@@ -76,16 +76,16 @@
         "STC PT": {
             "both_options"      : "Threads=1 Hash=16 Minimal=true MoveOverhead=0",
             "both_time_control" : "8.0+0.08",
-            "base_branch"       : "v0.8.0",
-            "base_network"      : "038B85E3",
+            "base_branch"       : "v0.9.0",
+            "base_network"      : "5478683C",
             "test_max_games"    : 20000
         },
 
         "LTC PT": {
             "both_options"      : "Threads=1 Hash=64 Minimal=true MoveOverhead=0",
             "both_time_control" : "40.0+0.4",
-            "base_branch"       : "v0.8.0",
-            "base_network"      : "038B85E3",
+            "base_branch"       : "v0.9.0",
+            "base_network"      : "5478683C",
             "test_max_games"    : 10000,
             "workload_size"     : 8
         }
