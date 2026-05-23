@@ -1151,7 +1151,7 @@ def complete_workload(config):
         if config.workload['test']['upload_pgns'] != 'FALSE':
             compact    = config.workload['test']['upload_pgns'] == 'COMPACT'
             pgn_files  = [MatchRunner.pgn_name(config, timestamp, x) for x in range(runner_cnt)]
-            ServerReporter.report_pgn(config, pgn_util.compress_list_of_pgns(pgn_files, scale_factor, compact))
+            ServerReporter.report_pgn(config, pgn_util.compress_pgn_files(pgn_files, scale_factor, compact))
 
 def safe_download_network_weights(config, branch):
 
