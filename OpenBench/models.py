@@ -53,7 +53,7 @@ class Machine(Model):
     mnps      = FloatField(default=0.00)
     dev_mnps  = FloatField(default=0.00)
     base_mnps = FloatField(default=0.00)
-    updated   = DateTimeField(auto_now=True)
+    updated   = DateTimeField(auto_now=True, db_index=True)
     secret    = CharField(max_length=64, default='None')
     info      = JSONField()
     workload  = IntegerField(default=0)
