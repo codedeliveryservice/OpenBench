@@ -43,7 +43,6 @@ from OpenBench.config import OPENBENCH_CONFIG
 from OpenBench.models import *
 from OpenBench.stats import TrinomialSPRT, PentanomialSPRT
 
-
 import OpenBench.views
 import OpenBench.model_utils
 
@@ -124,8 +123,6 @@ class TimeControl(object):
         # Fischer or Sudden Death otherwise
         return float(time_str.split('+')[0])
 
-
-
 def workload_uses_time_based_tc(workload):
 
     dev_type  = TimeControl.control_type(workload.dev_time_control)
@@ -135,11 +132,8 @@ def workload_uses_time_based_tc(workload):
        or (dev_type  != TimeControl.FIXED_NODES and dev_type  != TimeControl.FIXED_DEPTH) \
        or (base_type != TimeControl.FIXED_NODES and base_type != TimeControl.FIXED_DEPTH)
 
-
-
 def path_join(*args):
     return "/".join([f.lstrip("/").rstrip("/") for f in args]).rstrip('/')
-
 
 def media_download_response(fpath, filename, expires):
 
@@ -164,14 +158,12 @@ def media_download_response(fpath, filename, expires):
     response['Content-Disposition'] = 'attachment; filename=%s' % (filename)
     return response
 
-
 def read_git_credentials(engine):
     fname = 'credentials.%s' % (engine.replace(' ', '').lower())
     fpath = os.path.join(PROJECT_PATH, 'Config', fname)
     if os.path.exists(fpath):
         with open(fpath) as fin:
             return { 'Authorization' : 'token %s' % fin.readlines()[0].rstrip() }
-
 
 def extract_option(options, option):
 
@@ -185,19 +177,22 @@ def extract_option(options, option):
     if match: return match.group()
 
 
-
-
 def get_pending_tests():
-    t = Test.objects.filter(approved=False)
+    t = Test.objects.select_related('dev', 'base').filter(approved=False)
     t = t.exclude(finished=True)
     t = t.exclude(deleted=True)
     return t.order_by('-creation')
 
 def get_active_tests():
-    t = Test.objects.filter(approved=True)
+    t = Test.objects.select_related('dev', 'base').filter(approved=True)
     t = t.exclude(finished=True)
     t = t.exclude(deleted=True)
     return t.order_by('-priority', '-currentllr')
+
+def get_completed_tests():
+    t = Test.objects.select_related('dev', 'base').filter(finished=True)
+    t = t.exclude(deleted=True)
+    return t.order_by('-updated')
 
 def group_active_tests_by_priority(active):
     grouped = []
@@ -206,11 +201,6 @@ def group_active_tests_by_priority(active):
             grouped.append({ 'priority' : test.priority, 'tests' : [] })
         grouped[-1]['tests'].append(test)
     return grouped
-
-def get_completed_tests():
-    t = Test.objects.filter(finished=True)
-    t = t.exclude(deleted=True)
-    return t.order_by('-updated')
 
 
 def getRecentMachines(minutes=2):
