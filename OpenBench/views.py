@@ -614,12 +614,6 @@ def verify_worker(function):
 
 @csrf_exempt
 def client_version_ref(request):
-
-    # Verify the User's credentials
-    try: user = authenticate(request, True)
-    except UnableToAuthenticate:
-        return JsonResponse({ 'error' : 'Bad Credentials' })
-
     # Enough information to download the right Client
     return JsonResponse({
         'client_version'  : OPENBENCH_CONFIG['client_version' ],
@@ -629,11 +623,6 @@ def client_version_ref(request):
 
 @csrf_exempt
 def client_match_runner_version_ref(request):
-
-    # Verify the User's credentials
-    try: user = authenticate(request, True)
-    except UnableToAuthenticate:
-        return JsonResponse({ 'error' : 'Bad Credentials' })
 
     # Enough information to build the right Fastchess version
     return JsonResponse({
