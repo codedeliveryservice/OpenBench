@@ -749,7 +749,7 @@ def client_submit_nps(request, machine):
     machine.mnps      = float(request.POST['nps'     ]) / 1e6;
     machine.dev_mnps  = float(request.POST['dev_nps' ]) / 1e6;
     machine.base_mnps = float(request.POST['base_nps']) / 1e6;
-    machine.save()
+    machine.save(update_fields=['mnps', 'dev_mnps', 'base_mnps', 'updated'])
 
     # Pass back an empty JSON response
     return JsonResponse({})
@@ -789,11 +789,12 @@ def client_submit_results(request, machine):
 def client_heartbeat(request, machine):
 
     # Force a refresh of the updated timestamp
-    machine.save()
+    machine.save(update_fields=['updated'])
 
     # Include a 'stop' header iff the test was finished
-    test = Test.objects.get(id=int(request.POST['test_id']))
-    return JsonResponse([{}, { 'stop' : True }][test.finished])
+    finished = Test.objects.filter(id=int(request.POST['test_id'])).values_list('finished', flat=True).first()
+
+    return JsonResponse([{}, { 'stop' : True }][bool(finished)])
 
 @csrf_exempt
 @verify_worker
